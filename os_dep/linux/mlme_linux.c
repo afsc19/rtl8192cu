@@ -345,7 +345,7 @@ _func_enter_;
 		
 		wrqu.data.length = (wrqu.data.length<IW_CUSTOM_MAX) ? wrqu.data.length:IW_CUSTOM_MAX;
 		
-		wireless_send_event(adapter->pnetdev,IWEVCUSTOM,&wrqu,buff);
+		 // wireless_send_event(adapter->pnetdev,IWEVCUSTOM,&wrqu,buff);
 
 		if(buff)
 		    rtw_mfree(buff, IW_CUSTOM_MAX);
@@ -483,7 +483,7 @@ void rtw_indicate_sta_assoc_event(_adapter *padapter, struct sta_info *psta)
 
 	DBG_871X("+rtw_indicate_sta_assoc_event\n");
 	
-	wireless_send_event(padapter->pnetdev, IWEVREGISTERED, &wrqu, NULL);
+	 // wireless_send_event(padapter->pnetdev, IWEVREGISTERED, &wrqu, NULL);
 
 }
 
@@ -508,7 +508,7 @@ void rtw_indicate_sta_disassoc_event(_adapter *padapter, struct sta_info *psta)
 
 	DBG_871X("+rtw_indicate_sta_disassoc_event\n");
 	
-	wireless_send_event(padapter->pnetdev, IWEVEXPIRED, &wrqu, NULL);
+	 // wireless_send_event(padapter->pnetdev, IWEVEXPIRED, &wrqu, NULL);
 	
 }
 
