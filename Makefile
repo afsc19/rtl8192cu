@@ -21,6 +21,7 @@ ccflags-y += -I$(src)/include
 CONFIG_AUTOCFG_CP = n
 
 CONFIG_RTL8192C = y
+CONFIG_RTL8192CU = m
 CONFIG_RTL8192D = n
 CONFIG_RTL8723A = n
 
